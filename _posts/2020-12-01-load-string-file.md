@@ -33,4 +33,4 @@ int main(int argc, char * argv[])
 }
 {% endhighlight %}
 
-where the program loads its source file as a `std::string` and print its length in bytes.
+where the program loads its source file as a `std::string` and print its length in bytes. For further details see [load_file.cpp](https://github.com/sansajn/test/blob/master/boost/filesystem/load_file.cpp) sample.
