@@ -53,3 +53,10 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# image directory
+defaults:
+  - scope:
+      path: "assets/image"
+    values:
+      image: true
