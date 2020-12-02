@@ -2,7 +2,7 @@
 layout: post
 title:  "Building OGRE 3D samples."
 date:   2020-12-02 10:22:00 +0100
-categories: boost filesystem
+categories: ogre
 ---
 OGRE samples are not part of standard `libogre-1.12` or `ogre-1.12-tools` packages (in *Ubuntu 20.04 LTS*) so we need to build samples by are own from source, but don't worry it is easy.
 
@@ -32,7 +32,7 @@ command.
 - and install dependencies with
 
 ```bash
-sudo apt install libxaw7-dev libgles2-mesa-dev libxt-dev libxaw7-dev libsdl2-dev
+sudo apt install libxaw7-dev libgles2-mesa-dev libxt-dev libxaw7-dev libsdl2-dev cmake pkg-config g++
 ```
 
 ## 3. building
