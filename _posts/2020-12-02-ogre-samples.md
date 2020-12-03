@@ -68,4 +68,4 @@ After selecting one of the available renderer in a dialog window you should see
 
 You are now familiar with *OGRE* samples so maybe it is a time for your first program, see [OGRE starter tutorial]({% post_url 2020-12-01-ogre-starter %}).
 
-
+That is all, leave me a comment on [reddit](https://www.reddit.com/r/gamedev/comments/k5u9fc/building_ogre_3d_samples_minitutorial_for_ubuntu/?utm_source=share&utm_medium=web2x&context=3) in case you have any issues or you just want to say Hi!.
