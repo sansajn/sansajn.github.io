@@ -28,11 +28,26 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username:  sansajn
+linkedin_username: adam-hlavatovic-2185829
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+
+# image directory
+defaults:
+  - scope:
+      path: "assets/image"
+    values:
+      image: true
+
+# set post links to post/2020/12/03/test-post.html
+defaults:
+  - scope:
+      type: posts
+    values:
+      permalink: post/:year/:month/:day/:title.html
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -53,10 +68,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-# image directory
-defaults:
-  - scope:
-      path: "assets/image"
-    values:
-      image: true

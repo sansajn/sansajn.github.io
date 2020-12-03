@@ -3,6 +3,7 @@ layout: post
 title:  "Building OGRE 3D samples."
 date:   2020-12-02 10:22:00 +0100
 categories: ogre
+author: Adam Hlavatovic
 ---
 OGRE samples are not part of standard `libogre-1.12` or `ogre-1.12-tools` packages (in *Ubuntu 20.04 LTS*) so we need to build samples by are own from source, but don't worry it is easy.
 
@@ -63,4 +64,8 @@ After selecting one of the available renderer in a dialog window you should see
 
 ![SampleBrowser screenshot](/assets/image/ogre_sample_browser.jpg)
 
-Adam Hlavatovic
+## 5. next steps (optional)
+
+You are now familiar with *OGRE* samples so maybe it is a time for your first program, see [OGRE starter tutorial]({% post_url 2020-12-01-ogre-starter %}).
+
+
