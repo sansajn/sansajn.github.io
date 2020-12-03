@@ -3,6 +3,7 @@ layout: post
 title:  "OGRE starter tutorial."
 date:   2020-12-01 16:31:00 +0100
 categories: ogre
+author: Adam Hlavatovic
 ---
 # OGRE starter project
 
@@ -63,7 +64,7 @@ Scons will create `./hello` as a result. So
 
 will run the sample app. In my case I can now see
 
-![image](hello_ogre.png "Hello OGRE screenshot.")
+![image](/assets/image/hello_ogre.png "Hello OGRE screenshot.")
 
 You are done, feel free to modify ...
 
@@ -79,5 +80,3 @@ command to clone *OGRE* repository. Resource files can be found in `ogre/Samples
 
 > there is great jump-in tutorial for *OGRE* [there](https://ogrecave.github.io/ogre/api/latest/tutorials.html)
 
-
-Adam Hlavatovic

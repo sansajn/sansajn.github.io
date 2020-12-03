@@ -3,6 +3,7 @@ layout: post
 title:  "Project construction made easy with SCons."
 date:   2020-12-01 16:10:00 +0100
 categories: scons
+author: Adam Hlavatovic
 ---
 # project construction made easy
 
@@ -174,4 +175,3 @@ Maybe, you are asking yourself whether uninstall is also possible? Yes, it is! W
 [sequence]: https://docs.python.org/3.4/library/stdtypes.html#sequence-types-list-tuple-range
 [string]: https://docs.python.org/3.4/library/stdtypes.html#text-sequence-type-str
 
-Adam Hlavatovic
