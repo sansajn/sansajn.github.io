@@ -44,6 +44,13 @@ defaults:
     values:
       image: true
 
+# source code directory
+defaults:
+  - scope:
+      path: "assets/source"
+    values:
+      source: true
+
 # set post links to post/2020/12/03/test-post.html
 defaults:
   - scope:
