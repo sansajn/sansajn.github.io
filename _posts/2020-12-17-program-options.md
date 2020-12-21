@@ -39,7 +39,12 @@ Options:
 
 ## The Code
 
-First include `boost/program_options.hpp` header file and define `po` namespace and some `using` so the code will not become messy, this way
+Sample source code is available in [source/venc](https://github.com/sansajn/sansajn.github.io/tree/master/_includes/source/venc) directory.
+
+> **tip**: just run `scons` command to build `venc` with *SCons* or refer to [scons starter tutorial](https://github.com/sansajn/scons-starter) in case of any troubles
+
+
+First we include `boost/program_options.hpp` header file and define `po` namespace and some `using` so the code will not become messy, this way
 
 ```c++
 #include <string>
@@ -143,12 +148,25 @@ cout << "encoder=" << opt_encoder << "\n"
 
 and that is all.
 
-Full sample source code with *SCons* build script available in [source/venc](https://github.com/sansajn/sansajn.github.io/tree/master/_includes/source/venc) directory.
-
-> just run `scons` command to build it or refer to [scons starter tutorial](https://github.com/sansajn/scons-starter)
+> **note**: source code available [there](https://github.com/sansajn/sansajn.github.io/tree/master/_includes/source/venc)
 
 
 ## Final Testing
+
+To build `venc` you need to install `program_options` library from *boost* with 
+
+```bash
+sudo apt install libboost-program-options-dev
+```
+
+command and then run *SCons* with
+
+
+```bash
+scons
+```
+
+command from directory with `SConstruct` file.
 
 Running `venc` with output and input arguments produce
 
