@@ -143,7 +143,9 @@ cout << "encoder=" << opt_encoder << "\n"
 
 and that is all.
 
-Full sample source code available as [`venc_sample.cpp`](https://github.com/sansajn/test/blob/master/boost/program_options/venc_sample.cpp).
+Full sample source code with *SCons* build script available in [source/venc](https://github.com/sansajn/sansajn.github.io/tree/master/_includes/source/venc) directory.
+
+> just run `scons` command to build it or refer to [scons starter tutorial](https://github.com/sansajn/scons-starter)
 
 
 ## Final Testing
