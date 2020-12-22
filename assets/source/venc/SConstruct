@@ -1,6 +1,0 @@
-cpp17 = Environment(
-	CCFLAGS=['-std=c++17', '-Wall', '-g', '-O0'],
-	LIBS=['boost_program_options']
-)
-
-cpp17.Program('venc.cpp')
