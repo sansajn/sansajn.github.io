@@ -49,7 +49,9 @@ indent_size = 2
 
 > **note**: YAML files doesn't allow indentation with tabs so that is why `[*.yml]` override
 
-Feel free to change line ending from unix (`lf`) to windows (`crlf`) style as `end_of_line` property or `indent_style` from `tab` to `spaces` if you prefer one or another.
+Feel free to change line ending from unix (`lf`) to windows (`crlf`) style as `end_of_line` property or `indent_style` from `tab` to `spaces` if you prefer one or another. 
+
+See [editor-config-starter](https://github.com/sansajn/editor-config-starter) repository with samples in various languages and `.editorconfig` configuration.
 
 > **tip**: list of editors with build-in EditConfig support can be found in [editorconfig.org](https://editorconfig.org/) page in *No Plugin Necessary* section 
 
