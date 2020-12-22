@@ -35,6 +35,8 @@ This post contains step by step guide to setup [google analytics](https://analyt
 
 - copy `default.html` from `/var/lib/gems/2.7.0/gems/minima-2.5.1/_layouts/` to `_layouts` in your *Jekyll* project
 
+> **note**: in Ubuntu 20.04 LTS default minima theme is stored in /var/lib/gems/2.7.0/gems/minima-2.5.1 directory
+
 - open copied `default.html` and insert
 
 {% highlight html %}
