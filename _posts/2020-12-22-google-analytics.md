@@ -25,11 +25,11 @@ This post contains step by step guide to setup [google analytics](https://analyt
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-88ZTXK100S');
+  gtag('config', 'G-89ZTXX100S');
 </script>
 ```
 
-> **note**: your measurement id (in my case G-88ZTXK100S) will differ so do not just copy paste from there
+> **note**: your measurement id (in my case G-89ZTXX100S) will differ so do not just copy paste from there
 
 - create `google-analytics.html` in `_includes` and paste GST (**G**lobal **S**ite **T**ag) from previous step and save
 
