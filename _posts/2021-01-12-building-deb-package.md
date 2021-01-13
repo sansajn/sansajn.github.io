@@ -14,7 +14,7 @@ Building installable package can be handy in situation you decide to distribute 
 
 Package metadata used to build *deb* package are stored in `debian/` directory. The most interestig ones are `control`, `rules`, `changelog`, `compat` and `copyright` files. Full files specification can be found in [Debian New Maintainers' Guide](https://www.debian.org/doc/manuals/maint-guide/index.en.html) sections 4 and 5.
 
-For the purpose of this article we will use onces from [*ubuntu-package-starter*](https://github.com/sansajn/ubuntu-package-starter) sample repository. Clone the repository with
+For the purpose of this article we will use ones from [*ubuntu-package-starter*](https://github.com/sansajn/ubuntu-package-starter) sample repository. Clone the repository with
 
 ```bash
 git clone https://github.com/sansajn/ubuntu-package-starter.git
