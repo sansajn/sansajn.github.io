@@ -2,12 +2,12 @@
 layout: post
 title: "OGRE, using camera"
 date: 2021-01-13 16:31:00 +0100
-categories: ogre
+categories: ogre guide
 comments: true
 author: Adam Hlavatovic
 ---
 
-This post is the second post in my miniseries to OGRE graphics library and today we learn how to work with camera.
+This post is the second post in my miniseries to OGRE graphics library and today we learn how to work with camera. Full source code listing for today camera sample can be found in [ogre-guide](https://github.com/sansajn/ogre-guide) repository.
 
 > previous posts in OGRE miniseries: [OGRE starter guide]({% post_url 2020-12-01-ogre-starter %})
 
