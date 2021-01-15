@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "project construction made easy"
+title: "Project construction made easy with SCons"
 date: 2020-12-22 11:50:00 +0100
-categories: scons c++ tutorial
+categories: scons c++ guide
 comments: true
 author: Adam Hlavatovic
 ---

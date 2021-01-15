@@ -1,11 +1,10 @@
 ---
 layout: post
-title:  "OGRE starter tutorial."
+title:  "OGRE starter guide"
 date:   2020-12-01 16:31:00 +0100
 categories: ogre
 author: Adam Hlavatovic
 ---
-# OGRE starter project
 
 *OGRE 1.x* C++ starter template for easy prototyping on *Ubuntu 20.04 LTS* with [Scons](https://scons.org) build system. There are just three easy steps [setup](#1-setup), [clone](#2-clone) and [build & run](#3-build--run) and you are ready to start prototyping.
 
