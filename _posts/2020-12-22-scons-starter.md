@@ -9,7 +9,7 @@ author: Adam Hlavatovic
 
 In the following lines you find tips help you start with building *C++* programs using [SCons](https://scons.org) project construction tool under *Linux*.
 
-> *SCons* package can be installed with `sudo apt install scons ` command
+> **tip**: *SCons* package can be installed with `sudo apt install scons ` command.
 
 ### content
 
@@ -19,6 +19,7 @@ In the following lines you find tips help you start with building *C++* programs
 - [third party dependencies](#third-party-dependencies)
 - [static library](#static-library)
 - [install command](#install-command)
+- [reference](#reference)
 
 
 ## basics
@@ -138,7 +139,7 @@ phys = cpp17.StaticLibrary('phys', Glob('phys/*.cpp'))
 cpp17.Program('physics', ['main.cpp', phys])
 ```
 
-> We need to use *clang* there, because physics library use non-standard *C++* language feature not supported by *GCC*. Install clang with `sudo apt install clang` command.
+> **note**: We need to use *clang* there, because physics library use non-standard *C++* language feature not supported by *GCC*. Install clang with `sudo apt install clang` command.
 
 > **tip**: there are also builders for shared libraries [`SharedLibrary()`][SharedLibrary] and object files [`Object()`][Object]
 
@@ -159,6 +160,11 @@ Now we can type `scons install` to install `main` executable to `/opt/foo` direc
 > **tip**: in case you don't have write access to `/opt` directory, use `--install-sandbox` option to prefix target directory like `scons --install-sandbox=/home/adam install` to install `main` executable to `/home/adam/opt/foo` instead of `/opt/foo` directory
 
 Maybe, you are asking yourself whether uninstall is also possible? Yes, it is! We've got uninstall for free, we can type `scons -c install` which will uninstall `main` executable from `/opt/foo` directory.
+
+
+## reference
+
+List of *SCons* comands can be found [there](https://github.com/SCons/scons/wiki/SconsProcessOverview#node-commands).
 
 
 [Environ]: https://scons.org/doc/production/HTML/scons-man.html#f-Environment
