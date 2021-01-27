@@ -2,7 +2,7 @@
 layout: post
 title: "OGRE, moving objects and GUI in cube rain scene"
 date: 2021-01-15 17:40:00 +0100
-tags: [ogre, series, guide]
+tags: [ogre, series, c++]
 comments: true
 author: Adam Hlavatovic
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "OGRE, using camera"
 date: 2021-01-13 16:31:00 +0100
-tags: [ogre, series, guide]
+tags: [ogre, series, c++]
 comments: true
 author: Adam Hlavatovic
 ---

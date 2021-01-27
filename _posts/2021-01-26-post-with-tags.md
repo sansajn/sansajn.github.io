@@ -2,7 +2,7 @@
 layout: post
 title: "The very first post with tags"
 date: 2021-01-26 17:00:00 +0100
-tags: [jekyll, tags, guide]
+tags: [jekyll, tags]
 comments: true
 author: Adam Hlavatovic
 ---

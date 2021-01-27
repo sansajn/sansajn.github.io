@@ -2,7 +2,7 @@
 layout: post
 title: "Parsing command line arguments - the easy way!"
 date: 2020-12-17 16:00:00 +0100
-categories: boost
+tags: [boost, program_options, c++]
 author: Adam Hlavatovic
 ---
 
@@ -153,7 +153,7 @@ and that is all.
 
 ## Final Testing
 
-To build `venc` you need to install `program_options` library from *boost* with 
+To build `venc` you need to install `program_options` library from *boost* with
 
 ```bash
 sudo apt install libboost-program-options-dev

@@ -2,7 +2,7 @@
 layout: post
 title: "Project construction made easy with SCons"
 date: 2020-12-22 11:50:00 +0100
-categories: scons c++ guide
+tags: [scons, c++]
 comments: true
 author: Adam Hlavatovic
 ---
@@ -39,7 +39,7 @@ scons
 commands to see *SCons* in action. The `main` output should looks like this
 
 ```console
-$ ./main 
+$ ./main
 done!
 ```
 
@@ -54,7 +54,7 @@ cpp17 = Environment(CCFLAGS=['-std=c++17', '-Wall'])
 cpp17.Program('main.cpp')
 ```
 
-> go to `environment/` directory and run `scons` to build `main` executable to see *SCons* with modified environment in action 
+> go to `environment/` directory and run `scons` to build `main` executable to see *SCons* with modified environment in action
 
 There is not only `CCFLAGS` construction variable there but many others like
 
@@ -92,7 +92,7 @@ Program('3dmath', Glob('*.cpp'))
 
 ## third party dependencies
 
-Let's render a triangle with *OpenGL ES2* and *GLFW* libraries, like in [triangle](https://github.com/sansajn/scons-starter/blob/master/triangle/triangle.cpp) sample. We need to create `SConstruct` with *OpenGL ES2* and *GLFW* library dependencies to get our sample working. 
+Let's render a triangle with *OpenGL ES2* and *GLFW* libraries, like in [triangle](https://github.com/sansajn/scons-starter/blob/master/triangle/triangle.cpp) sample. We need to create `SConstruct` with *OpenGL ES2* and *GLFW* library dependencies to get our sample working.
 
 In *Linux* there is almighty *pkg-config* there to help us with the task.
 

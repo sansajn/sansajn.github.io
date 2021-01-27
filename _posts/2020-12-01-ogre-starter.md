@@ -2,7 +2,7 @@
 layout: post
 title: "OGRE starter guide"
 date: 2020-12-01 16:31:00 +0100
-tags: [ogre, series, guide]
+tags: [ogre, series, c++]
 comments: true
 author: Adam Hlavatovic
 ---

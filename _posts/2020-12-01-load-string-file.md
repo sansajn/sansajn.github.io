@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Loading text file to std::string?"
-date:   2020-12-01 08:10:00 +0100
-categories: boost filesystem
+title: "Loading text file to std::string?"
+date: 2020-12-01 08:10:00 +0100
+tags: [boost, filesystem, c++]
+comments: true
 author: Adam Hlavatovic
 ---
 In case we want to load text file to `std::string`, I've found that *Booost.Filesystem* has a support for it in [`string_file.hpp`](https://www.boost.org/doc/libs/1_74_0/boost/filesystem/string_file.hpp) header file. There are two functions defined there `load_string_file()` and `save_string_file()`. The first one loads file content to `std::string` and the second one saves `std::string` to text file.
