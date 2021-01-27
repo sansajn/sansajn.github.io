@@ -2,7 +2,7 @@
 layout: post
 title: "OGRE, using camera"
 date: 2021-01-13 16:31:00 +0100
-categories: ogre guide
+tags: [ogre, series, guide]
 comments: true
 author: Adam Hlavatovic
 ---
@@ -124,7 +124,7 @@ _cameraman = make_unique<CameraMan>(cam_nd);
 _cameraman->setStyle(CS_FREELOOK);
 ```
 
-and at the end of `setup()` grab mouse with 
+and at the end of `setup()` grab mouse with
 
 ```c++
 setWindowGrab();
@@ -148,7 +148,7 @@ cd strarter-guide/camera
 scons
 ```
 
-commands. On successfull build `main` binary should be created so run `./main` command to run the sample. You should be now able to move with mouse and see that camera view is changing this way 
+commands. On successfull build `main` binary should be created so run `./main` command to run the sample. You should be now able to move with mouse and see that camera view is changing this way
 
 ![ogre_camera_head.webp](https://github.com/sansajn/ogre-guide/raw/master/doc/camera_head.webp "moving with camera in the sample window")
 

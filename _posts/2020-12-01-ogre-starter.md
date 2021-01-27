@@ -2,7 +2,7 @@
 layout: post
 title: "OGRE starter guide"
 date: 2020-12-01 16:31:00 +0100
-categories: ogre guide
+tags: [ogre, series, guide]
 comments: true
 author: Adam Hlavatovic
 ---
@@ -37,11 +37,11 @@ git clone https://github.com/OGRECave/ogre.git
 
 command
 
-- checkout newest 1.x version with 
+- checkout newest 1.x version with
 
 ```bash
 cd ogre
-git checkout -b v1.12.9 v1.12.9 
+git checkout -b v1.12.9 v1.12.9
 ```
 
 > currently the newest available 1.x version is 1.12.9
@@ -98,10 +98,10 @@ sudo ln -s libzzip-0.so.13 libzzip.so.13
 
 commands.
 
-> **tip**: optionally you can also install *OGRE* documentation as `ogre-1.12-doc` and tools as `ogre-1.12-tools` packages 
+> **tip**: optionally you can also install *OGRE* documentation as `ogre-1.12-doc` and tools as `ogre-1.12-tools` packages
 
 
-## 2. clone 
+## 2. clone
 
 Clone starter project repository with
 

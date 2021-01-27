@@ -2,7 +2,7 @@
 layout: post
 title: "OGRE, moving objects and GUI in cube rain scene"
 date: 2021-01-15 17:40:00 +0100
-categories: ogre guide
+tags: [ogre, series, guide]
 comments: true
 author: Adam Hlavatovic
 ---
@@ -41,7 +41,7 @@ for (cube_object & cube : _cubes)
 _cube_nodes.resize(_cube_count);
 ```
 
-we also need one scene node instance for each cube in scene stored in `_cube_notes` vector, that is why `_cube_nodes.resize()` is called. 
+we also need one scene node instance for each cube in scene stored in `_cube_notes` vector, that is why `_cube_nodes.resize()` is called.
 
 Let's now focuse on `setup_scene()` member function, where at the beginning we create lights and camera controller pretty much the same way as in camera sample. Then in a for loop we create node for each cube and store it in `_cube_nodes` via iterator whis way
 
@@ -51,7 +51,7 @@ auto cube_nodes_it = begin(_cube_nodes);
 for (cube_object & cube : _cubes) {
 	*cube_nodes_it = create_cube_node(scene, cube);
 		++cube_nodes_it;
-	
+
 	*cube_nodes_it = node;  // save node for later update
 	++cube_nodes_it;
 }
@@ -105,7 +105,7 @@ for (cube_object & cube : _cubes) {
 }
 ```
 
-where new cube y position is calculated by `y -= fall_speed * (2.0 - cube.scale) * dt` formula where `2.0 - cube.scale` adds little bit variation so not all cubes are falling the same way. 
+where new cube y position is calculated by `y -= fall_speed * (2.0 - cube.scale) * dt` formula where `2.0 - cube.scale` adds little bit variation so not all cubes are falling the same way.
 
 
 ## GUI integration
@@ -152,14 +152,14 @@ bool ogre_app::keyReleased(KeyboardEvent const & evt) {
 }
 ```
 
-> **tip**: watch out implementations for `keyPressed()`, `mouseMoved()`, `mousePressed()` and `mouseReleased()` in [`cube_rain.cpp`](https://github.com/sansajn/ogre-guide/blob/f6d3859f8d72c706aeca760ea839858e5a22872a/moving_ojects/cube_rain.cpp#L253) file 
+> **tip**: watch out implementations for `keyPressed()`, `mouseMoved()`, `mousePressed()` and `mouseReleased()` in [`cube_rain.cpp`](https://github.com/sansajn/ogre-guide/blob/f6d3859f8d72c706aeca760ea839858e5a22872a/moving_ojects/cube_rain.cpp#L253) file
 
 
 ## Changing number of cubes
 
 We heve made small simplification during `update()` description and skipped handling number of cubes option change via slider widget.
 
-There are two scenarios there, we can eigther end up with less cubes in the scene or with more cubes in the scene after using the slider widget. In both cases we resize `_cubes` vector with 
+There are two scenarios there, we can eigther end up with less cubes in the scene or with more cubes in the scene after using the slider widget. In both cases we resize `_cubes` vector with
 
 ```c++
 int prev_cube_count = size(_cubes);

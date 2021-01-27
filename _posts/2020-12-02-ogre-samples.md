@@ -2,14 +2,14 @@
 layout: post
 title:  "Building OGRE 3D samples."
 date:   2020-12-02 10:22:00 +0100
-categories: ogre
+tags: [ogre, series, guide]
 author: Adam Hlavatovic
 ---
 OGRE samples are not part of standard `libogre-1.12` or `ogre-1.12-tools` packages (in *Ubuntu 20.04 LTS*) so we need to build samples by are own from source, but don't worry it is easy.
 
-## 1. download *OGRE* source code 
+## 1. download *OGRE* source code
 
-Download *OGRE* source code with 
+Download *OGRE* source code with
 
 ```bash
 git clone https://github.com/OGRECave/ogre.git
