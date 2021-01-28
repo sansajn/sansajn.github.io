@@ -2,7 +2,7 @@
 layout: post
 title: "Project construction made easy with SCons"
 date: 2020-12-22 11:50:00 +0100
-tags: [scons, c++]
+tags: [scons, series, c++]
 comments: true
 author: Adam Hlavatovic
 ---
