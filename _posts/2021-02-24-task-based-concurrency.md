@@ -3,6 +3,7 @@ layout: post
 title: "Task based concurrency in C++"
 date: 2021-02-24 8:00:00 +0100
 tags: [std, c++, c++11, concurrency]
+comments: true
 author: Adam Hlavatovic
 ---
 
