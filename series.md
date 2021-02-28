@@ -26,3 +26,10 @@ List of series ...
 {% for post in posts %}
 - [{{ post.title }}]({{ post.url | relative_url }})
 {% endfor %}
+
+## C++17 series
+
+{% assign posts = site.posts|where: "tags", "series"|where: "tags", "c++17"|reverse %}
+{% for post in posts %}
+- [{{ post.title }}]({{ post.url | relative_url }})
+{% endfor %}
