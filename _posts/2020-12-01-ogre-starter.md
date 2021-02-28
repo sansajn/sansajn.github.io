@@ -21,7 +21,7 @@ Normally the easiest way to start with *OGRE* is from official package (`libogre
 - install dependencies with
 
 ```bash
-sudo apt install libxaw7-dev libsdl2-dev libgles2-mesa-dev libxt-dev libzzip-dev libfreetype-dev scons g++ pkg-config git
+sudo apt install libxaw7-dev libsdl2-dev libgles2-mesa-dev libxt-dev libzzip-dev libfreetype-dev scons g++ pkg-config git cmake
 ```
 
 command.
