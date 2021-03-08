@@ -2,7 +2,7 @@
 layout: post
 title: "Interruptible threads (jthread) in C++20"
 date: 2021-02-28 11:00:00 +0100
-tags: [series, c++20, c++]
+tags: [series, c++20, c++, concurrency]
 comments: true
 author: Adam Hlavatovic
 ---
