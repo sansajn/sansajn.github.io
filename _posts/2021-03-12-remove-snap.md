@@ -21,7 +21,7 @@ sudo rm -rf /snap
 
 commands, then
 
-- mark `snapd` as *persona non grata* so it will not be installed by other package as a dependancy with
+- mark `snapd` as *persona non grata* so it will not be installed by other package as a dependency with
 
 ```bash
 sudo apt-mark hold snapd 
