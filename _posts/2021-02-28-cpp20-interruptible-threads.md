@@ -2,24 +2,23 @@
 layout: post
 title: "Interruptible threads (jthread) in C++20"
 date: 2021-02-28 11:00:00 +0100
-tags: [series, c++20, c++, concurrency, jthread, stop_token, condition_variable_any]
+tags: [series, c++20, c++, concurrency, jthread, stop_token, condition_variable_any, stop_callback]
 comments: true
 author: Adam Hlavatovic
 ---
 
-[comment]: we have a new toy in c++20 ...
-
-There is new shiny `jthread` thread implementation there in C++20 allows thread interruption via `stop_token` instance. But that is not all, finally the `jthread` instance doesn't need to be joined (by calling `join()`) before its destruction as in a case of `thread`.
+We have a new toy in *C++20* standard called `jthread`. `jthread` is a thread implementation which doesn't need to be joined (by calling `join()`) before its destruction and it is also interruptible (via `stop_token`).
 
 ### Content
 
 - [Interruptible `jthread` usage](#interruptible-jthread-usage)
 - [Interruptible `condition_variable_any` usage](#interruptible-condition_variable_any-usage)
+- [Interruption with `stop_callback`](#interruption-with-stop_callback)
 
 
 ## Interruptible `jthread` usage
 
-Lets see how `jthread` can be used
+Let's see how `jthread` and `stop_token` can be used together
 
 ```c++
 #include <thread>
@@ -62,6 +61,8 @@ int main(int argc, char * argv[])
 ```
 
 In case we want create interruptible thread `th_interrupt` the threads functor need to have `stop_token` instance as argument (1). We can later call `jthread::request_stop()` to signalize thread quit from outside of the thread (3). In thread functor we can use `stop_token::stop_requested()` to check interruption was signalized (2) and peacefully quit the thread.
+
+> full blown sample available as [`jthread_hello.cpp`](https://github.com/sansajn/test/blob/master/c%2B%2B/thread/jthread_hello.cpp)
 
 
 ## Interruptible `condition_variable_any` usage
@@ -113,5 +114,35 @@ int main(int argc, char * argv[]) {
 
 where we first create worker thread (1). Worker job is to execute jobs from synchronized queue `jobs`, but at the beginning the queue is empty so worker is waiting for condition variable notification (2). Then before we push any job to the queue we ask worker to stop via `request_stop()` member funciton call (3).
 
+> full blown sample available as [`jthread_with_condition_variable.cpp`](https://github.com/sansajn/test/blob/master/c%2B%2B/thread/jthread_with_condition_variable.cpp)
 
-[comment]: let's say you have queue without stop_token support, ...
+
+## Interruption with `stop_callback`
+
+Let's say we want to interrupt something without `stop_token` support like `asio::io_context`. We want to run blocking `asio::io_context::run()` within a thread this way
+
+```c++
+asio::io_context io;
+jthread t{[&io](stop_token stop){
+	io.run();  // #1
+}};
+
+t.request_stop();  // #2
+```
+
+The problem there is that once `io.run()` is executed (1) we can not interrupt it with `stop_token` (2) because the call is blocking so `stop_token` state is never checked. That is exactly where `stop_callback` can be used, this way
+
+```c++
+asio::io_context io;
+jthread t{[&io](stop_token stop){
+	stop_callback stopper{stop, [&io]{
+		io.stop();  // #3
+	}};
+
+	io.run();  // #1
+}};
+
+t.request_stop();  // #2
+```
+
+where calling `request_stop()` (2) calls `stopper` handler which execute `io.stop()` (3) so `io.run()` returns and thread can be interrupted.
