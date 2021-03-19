@@ -13,11 +13,11 @@ There is new shiny `jthread` thread implementation there in C++20 allows thread 
 
 ### Content
 
-- [Interuptible `jthread` usage](#interuptible-jthread-usage)
-- [Interuptible `condition_variable_any` usage](#interuptible-condition_variable_any-usage)
+- [Interruptible `jthread` usage](#interruptible-jthread-usage)
+- [Interruptible `condition_variable_any` usage](#interruptible-condition_variable_any-usage)
 
 
-## Interuptible `jthread` usage
+## Interruptible `jthread` usage
 
 Lets see how `jthread` can be used
 
@@ -64,9 +64,7 @@ int main(int argc, char * argv[])
 In case we want create interruptible thread `th_interrupt` the threads functor need to have `stop_token` instance as argument (1). We can later call `jthread::request_stop()` to signalize thread quit from outside of the thread (3). In thread functor we can use `stop_token::stop_requested()` to check interruption was signalized (2) and peacefully quit the thread.
 
 
-## Interuptible `condition_variable_any` usage
-
-[comment]: create new section for condition_variable_any?
+## Interruptible `condition_variable_any` usage
 
 We can use `stop_token` also with `condition_variable_any` instance to interupt waiting on condition variable this way
 
