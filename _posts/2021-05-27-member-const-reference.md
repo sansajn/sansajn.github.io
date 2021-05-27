@@ -7,8 +7,6 @@ comments: true
 author: Adam Hlavatovic
 ---
 
-> co som sa pomocou `foo` snazil implementovat ?
-
 Assume following structure `foo` with constant reference as member variable
 
 ```c++
@@ -20,9 +18,7 @@ stuct foo {
 };
 ```
 
-> tu musim ozrejmit, co je moj zamer
-
-which is perfectly valid in case of following (1) and (2) usages
+which is perfectly working in case of following (1) and (2) usages
 
 ```c++
 string const s = "hello!";
@@ -34,14 +30,14 @@ foo h{s_mut};
 assert(!h.empty());  // (2) OK, working as expected
 ```
 
-but not working as expected in this use case
+but not working as expected in following (3) use case
 
 ```c++
 foo f{"hello!"};
 assert(!f.empty());  // (3) Wrong, not working as expected
 ```
 
-actualy usage (3) is not working at all, but before we dive into what is wrong in (3) let me describe one interesting C++ feature. We are talking there about extending temporary variable lifetime by binding to a constant reference, this way
+Usage (3) is actually not working at all, but before we dive into what is wrong there let me describe one interesting C++ feature. We are talking there about extending temporary variable lifetime by binding to a constant reference, this way
 
 ```c++
 string temporary() {return "hello!";}
@@ -51,7 +47,7 @@ void goo() {
 }
 ```
 
-I wanted to use above feature in my `foo` structure implementation, but it turns out that this only works in case of local variables.
+I wanted to use above C++ feature in my `foo` structure implementation, but it turns out that this only works in case of local variables.
 
 Now, get back to our `foo` implementation. The think there in usage (3) is that our temporary string object in constructor call `foo f{"hello!"}` is bind to a constant reference argument variable `s`. Even we store `s` to `_s` member variable in the constructor, temporary string object is destroyed at the end of the constructor call and we end up with dangling reference stored as `_s`.
 
