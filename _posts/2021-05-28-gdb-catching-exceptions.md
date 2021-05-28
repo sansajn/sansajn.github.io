@@ -98,6 +98,8 @@ and there it is, program stoped at *Catchpoint 1 (exception thrown)*. We can now
 
 and from `#1` we can see that `throw` was called from `unhandled_exception` function at `main.cpp:4`.
 
+If you know how to setup *Qt Creator* IDE to stop at `throw` while debugging leave me a commnet bellow.
+
 And that is pretty much all for today, happy debugging!
 
 [gdb]: https://www.gnu.org/software/gdb/
