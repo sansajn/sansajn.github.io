@@ -7,7 +7,7 @@ comments: true
 author: Adam Hlavatovic
 ---
 
-SCons doesn't fave baked-in support for release/debug build so there is more ways to do it. I've found the one based on command line options (e.g. `--release-build`) usefull and easy to implement. It is based on `AddOption()` function with the same use case and notation as standard `ArgumentParser.add_argument()` from [`argparse`](https://docs.python.org/3.4/library/argparse.html) library.
+SCons doesn't have baked-in support for release/debug build so there is more ways to do it. I've found the one based on command line options (e.g. `--release-build`) usefull and easy to implement. It is based on `AddOption()` function with the same use case and notation as standard `ArgumentParser.add_argument()` from [`argparse`](https://docs.python.org/3.4/library/argparse.html) library.
 
 To define `--release-build` commandline argument option all we needto do is call `AddOption()` this way
 
