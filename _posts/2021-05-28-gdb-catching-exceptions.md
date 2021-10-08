@@ -7,7 +7,7 @@ comments: true
 author: Adam Hlavatovic
 ---
 
-If your program ever terminates with an exception and you have no idea where to start investigate, then the article is definitely for you. [GDB][gdb] has nace feature allow you to find exception source by using `catch throw` command.
+If your program ever terminates with an exception and you have no idea where to start investigate, then the article is definitely for you. [GDB][gdb] has nice feature allow you to find exception source by using `catch throw` command.
 
 Consider following test program `main.cpp`
 
