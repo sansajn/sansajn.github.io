@@ -2,7 +2,7 @@
 layout: post
 title: "Catch2 event listeners"
 date: 2021-08-04 8:00:00 +0100
-tags: [catch, test, c++]
+tags: [catch, series, test, c++]
 comments: true
 author: Adam Hlavatovic
 ---
