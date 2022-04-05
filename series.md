@@ -20,6 +20,14 @@ List of series ...
 - [{{ post.title }}]({{ post.url | relative_url }})
 {% endfor %}
 
+## Starter series
+
+{% assign posts = site.posts|where: "tags", "series"|where: "tags", "starter"|reverse %}
+{% for post in posts %}
+- [{{ post.title }}]({{ post.url | relative_url }})
+{% endfor %}
+
+
 ## C++20 series
 
 {% assign posts = site.posts|where: "tags", "series"|where: "tags", "c++20"|reverse %}
