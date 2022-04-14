@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Exception with stacktrace dump"
+title: "Exceptions with stacktrace dump"
 date: 2021-10-08 8:00:00 +0100
-tags: [c++, exception, boost, debugging]
+tags: [c++, exception, boost, debug]
 comments: true
 author: Adam Hlavatovic
 ---
