@@ -11,8 +11,6 @@ author: Adam Hlavatovic
 
 Guide to implement *random access* iterator working with parallel `std::transform` algorithm to support parallelization for pixel algorithms (such as raytracer) ...
 
-> TODO: link implementation files `input_it/forward_it ...` files
-
 I've recently go through great raytracing related book where "raytracing" loop was implemented more or less this way
 
 ```c++
