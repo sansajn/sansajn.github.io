@@ -41,3 +41,11 @@ List of series ...
 {% for post in posts %}
 - [{{ post.title }}]({{ post.url | relative_url }})
 {% endfor %}
+
+
+## Jenkins series
+
+{% assign posts = site.posts|where: "tags", "series"|where: "tags", "jenkins"|reverse %}
+{% for post in posts %}
+- [{{ post.title }}]({{ post.url | relative_url }})
+{% endfor %}
