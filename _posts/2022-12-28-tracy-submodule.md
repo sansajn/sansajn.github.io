@@ -101,7 +101,7 @@ which produce `capture-release` binary.
 
 > TODO: describe tracy version used (because this will change in the feature)
 
-We also need *profiler* to visualise captured trace files. So go to *profiler* directory and run `make` with
+We also need *profiler* to visualize captured trace files. So go to *profiler* directory and run `make` with
 
 ```bash
 cd submodule/tracy/profiler/build/unix
@@ -153,4 +153,4 @@ commands, click to *Open saved trace* button within profiler GUI and open saved 
 
 ![image](/assets/image/tracy_profiler_sample.png "Tracy profiler screenshot.")
 
-And that is today, see you soon.
+And that is all today, see you soon.
