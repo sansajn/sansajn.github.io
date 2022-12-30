@@ -2,6 +2,7 @@
 layout: post
 title: "Tracy profiler integration"
 date: 2022-12-29 8:00:00 +0100
+last_modified_at: 2022-12-30 8:00:00 +0100
 tags: [tracy, concurrency, c++, profiler]
 comments: true
 author: Adam Hlavatovic
@@ -247,6 +248,13 @@ commands. Click to *Open saved trace* button within profiler GUI and open saved 
 
 ![image](/assets/image/tracy_profiler_sample.png "Tracy profiler screenshot.")
 
+
+The sample code is available in [github](https://github.com/sansajn/tracy_as_library) repository.
+
+
 And that is all today, see you soon.
 
-> TODO: make repository from the sample in github and mention it there
+
+# Issues
+
+- sometimes `capture` cant establish connection with the sample, that is something required further investigation ...
