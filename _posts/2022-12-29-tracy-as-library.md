@@ -203,7 +203,7 @@ To visualize trace file from `capture` we need to build *profiler* from `tracy/p
 Now run `capture` with
 
 ```console
-cd tracy/capture/build/unix
+$ cd tracy/capture/build/unix
 $ ./capture-release -o output.tracy
 Connecting to 127.0.0.1:8086...
 ```
